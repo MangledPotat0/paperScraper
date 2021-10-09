@@ -18,8 +18,8 @@ class converter(fname):
         self.outputfile = self.outputpath + fname + '.txt'
 
     def convert(self):
-        with open(self.inputfile, r) as infile:
-            with open(self.outputfile, w+) as outfile:
+        with open(self.inputfile, 'r') as infile:
+            with open(self.outputfile, 'w+') as outfile:
                 pdf = pdftotext.PDF(infile)
 
                 contents = ''
